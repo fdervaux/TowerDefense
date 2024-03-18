@@ -9,12 +9,25 @@ public class GameManager : Singleton<GameManager>
     [Header("Game Ui Panel")]
     [SerializeField] private CanvasGroup _startGameBackgroundPanel;
     [SerializeField] private RectTransform _startGameOverPanel;
+    [SerializeField] private List<EnemyWaveData> _enemyWaveData = new List<EnemyWaveData>();
+
+
+    [SerializeField] private PauseMenuController _pauseMenuController;
 
     private float _gameTimeScale = 1;
     public float GameTimeScale  {
         get => _gameTimeScale;
     }
 
+    public void PauseGame()
+    {
+        _gameTimeScale = 0;
+    }
+
+    public void ResumeGame()
+    {
+        _gameTimeScale = 1;
+    }
 
     public void StartGame()
     {
@@ -23,10 +36,10 @@ public class GameManager : Singleton<GameManager>
         _startGameOverPanel.anchoredPosition = new Vector2(-1920, 0);
         _startGameBackgroundPanel.interactable = true;
         _startGameBackgroundPanel.blocksRaycasts = true;
-
-        
         _gameTimeScale = 0;
         
+
+        _pauseMenuController.CanPause = false;
 
         sequence.AppendCallback(() => {
             _startGameOverPanel.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = "Get Ready";
@@ -41,9 +54,8 @@ public class GameManager : Singleton<GameManager>
             _startGameBackgroundPanel.interactable = false;
             _startGameBackgroundPanel.blocksRaycasts = false;
             _gameTimeScale = 1;
+            _pauseMenuController.CanPause = true;
         });
-
-
     }
 
     public void Start()

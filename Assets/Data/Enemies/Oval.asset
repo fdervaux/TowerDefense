@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98253b14843d58b46bef6da151eca54c, type: 3}
+  m_Name: Oval
+  m_EditorClassIdentifier: 
+  enemyName: Enemy
+  PV_Number: 100
+  speed: 1
+  prefab: {fileID: 7890269255848521973, guid: 8f1b1c32fb73bb941aa2b4d3fb509a3d, type: 3}

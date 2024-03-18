@@ -14,6 +14,14 @@ public class PauseMenuController : MonoBehaviour
 
     private bool _isPaused = false;
 
+    private bool _canPause = true;
+
+    public bool CanPause
+    {
+        get => _canPause;
+        set => _canPause = value;
+    }
+
     private void Start()
     {
         _canvasGroup = GetComponent<CanvasGroup>();
@@ -27,13 +35,15 @@ public class PauseMenuController : MonoBehaviour
 
     public void OnPause(InputAction.CallbackContext context)
     {
+        if(!_canPause) return;
+
         if (context.phase != InputActionPhase.Performed) return;
         OnCancel();
     }
 
     public void OnCancel()
     {
-        if (_isPaused)
+        if (_isPaused )
         {
             ResumeGame();
             return;
@@ -46,6 +56,8 @@ public class PauseMenuController : MonoBehaviour
         if (_isPaused) return;
 
         _isPaused = true;
+
+        GameManager.Instance.PauseGame();
 
         _canvasGroup.DOFade(1, _animationDuration)
             .SetUpdate(true);
@@ -79,6 +91,8 @@ public class PauseMenuController : MonoBehaviour
 
         _canvasGroup.interactable = false;
         _canvasGroup.blocksRaycasts = false;
+
+        GameManager.Instance.ResumeGame();
 
         EventSystem.current.SetSelectedGameObject(null);
     }
