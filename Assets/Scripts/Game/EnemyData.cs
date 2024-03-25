@@ -4,9 +4,11 @@ using UnityEngine;
 public class EnemyData : ScriptableObject
 {   
     public string enemyName = "Enemy";
-    public int PV_Number = 100;
+    public int health = 100;
     public int speed = 1;
     public GameObject prefab;
+
+    public int reward = 100;
 
 }
 

@@ -9,10 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98253b14843d58b46bef6da151eca54c, type: 3}
-  m_Name: Oval
+  m_Script: {fileID: 11500000, guid: 7003935b033dd0642bc7aa7ec9cb632d, type: 3}
+  m_Name: Cylinder
   m_EditorClassIdentifier: 
-  enemyName: Enemy
-  health: 100
-  speed: 6
-  prefab: {fileID: 7890269255848521973, guid: 8f1b1c32fb73bb941aa2b4d3fb509a3d, type: 3}
+  towerName: Tower
+  damage: 1
+  attackSpeed: 0.1
+  attackRange: 10
+  bulletSpeed: 40
+  bulletLifeTime: 2
+  cost: 100

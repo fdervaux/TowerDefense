@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7879844721223662232}
   - component: {fileID: 1249673455855692756}
   - component: {fileID: 3335617593718427884}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4214983286845462313}
-  m_Layer: 0
+  - component: {fileID: 1913609098784787621}
+  m_Layer: 6
   m_Name: Towers Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,6 +139,22 @@ Transform:
   - {fileID: 797588676135165202}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1913609098784787621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2576713248997028513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1df7df06382d9ba4f876c02458cdd864, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerData: {fileID: 11400000, guid: 5c39a08db49b7534285cd69f57a0e8ad, type: 2}
+  bulletPrefab: {fileID: 7305953114285913759, guid: a96e006644d5a4845b50c0a291037354,
+    type: 3}
+  firePoint: {fileID: 797588676135165202}
 --- !u!1 &8647322128084008119
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,7 +167,7 @@ GameObject:
   - component: {fileID: 2789590957927197079}
   - component: {fileID: 4910999187677240230}
   - component: {fileID: 5435433177137478022}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: canon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,13 +182,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8647322128084008119}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.75, y: 3, z: 0}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 3, z: 0.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4214983286845462313}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!33 &2789590957927197079
 MeshFilter:
   m_ObjectHideFlags: 0

@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemiesData:
   - EnemyData: {fileID: 11400000, guid: 9bcaba0351714bd4d98f965b15f4efa4, type: 2}
-    SpawnTimeAfterPrevious: 0.2
+    SpawnTimeAfterPrevious: 2
   - EnemyData: {fileID: 11400000, guid: 9bcaba0351714bd4d98f965b15f4efa4, type: 2}
-    SpawnTimeAfterPrevious: 0.2
+    SpawnTimeAfterPrevious: 2
   - EnemyData: {fileID: 11400000, guid: 9bcaba0351714bd4d98f965b15f4efa4, type: 2}
-    SpawnTimeAfterPrevious: 0.2
+    SpawnTimeAfterPrevious: 2
   - EnemyData: {fileID: 11400000, guid: 9bcaba0351714bd4d98f965b15f4efa4, type: 2}
-    SpawnTimeAfterPrevious: 0.2
+    SpawnTimeAfterPrevious: 2
   - EnemyData: {fileID: 11400000, guid: 9bcaba0351714bd4d98f965b15f4efa4, type: 2}
-    SpawnTimeAfterPrevious: 0.2
+    SpawnTimeAfterPrevious: 2
   - EnemyData: {fileID: 11400000, guid: 9bcaba0351714bd4d98f965b15f4efa4, type: 2}
-    SpawnTimeAfterPrevious: 0.2
+    SpawnTimeAfterPrevious: 2
