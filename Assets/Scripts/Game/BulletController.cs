@@ -7,7 +7,6 @@ public class BulletController : MonoBehaviour
     private int _damage;
     private float _timeLeft;
     private Transform _target;
-
     private Vector3 _targetDirection;
 
     public void SetBulletData(float speed, float lifeTime, int damage, Transform target)

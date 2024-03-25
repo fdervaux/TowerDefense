@@ -182,10 +182,10 @@ public class GameManager : Singleton<GameManager>
 
     public IEnumerator SpawnEnemyWave(EnemyWaveData enemyWaveData)
     {
-        foreach (var enemyWave in enemyWaveData.EnemiesData)
+        foreach (var enemyData in enemyWaveData.EnemiesData)
         {
-            CreateEnemy(enemyWave.EnemyData, _enemyPath);
-            yield return new WaitForSeconds(enemyWave.SpawnTimeAfterPrevious);
+            CreateEnemy(enemyData.EnemyData, _enemyPath);
+            yield return new WaitForSeconds(enemyData.SpawnTimeAfterPrevious);
         }
     }
 
